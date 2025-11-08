@@ -49,6 +49,33 @@ int main() {
     }
 
     // Agora vamos pra exibição! (Próximo Passo)
+    // ----------------------------------------------------
+    // INÍCIO da Fase de Exibição
+    // ---------------------------------------------------
+
+    printf("\n\n=== MAPA ATUALIZADO (Nível Novato) ===\n");
+    printf("+----+--------------------+-----------+--------+\n");
+    printf("| ID | NOME DO TERRITÓRIO | EXÉRCITO  | TROPAS |\n");
+    printf("+----+--------------------+-----------+--------+\n");
+
+
+    // Loop pra percorrer o mapa e mostrar os dados de cada Território
+ for (i = 0; i < NUM_TERRITORIOS; i++) {
+        // %-2d: Número alinhado à esquerda em 2 espaços.
+        // %-20s: String alinhada à esquerda em 20 espaços.
+        // %-9s: String alinhada à esquerda em 9 espaços.
+        printf("| %-2d | %-20s | %-9s | %-6d |\n", 
+            i + 1,
+            mapa[i].nome,
+            mapa[i].cor_exercito,
+            mapa[i].num_tropas
+        );
+    }
+    printf("+----+--------------------+-----------+--------+\n");
+
+
+    // Agora sim, terminamos o Nível Novato!
+    printf("\nNível Novato concluído com sucesso! ✅\n");
 
     return 0;
 }
